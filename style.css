@@ -1,0 +1,491 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Roboto', sans-serif;
+}
+html,body{
+    width: 100%;
+    height: 100%;
+}
+body
+{
+    background-color: #F1F1F1;
+}
+#loader
+{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background-color: white;
+    z-index: 99999;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+#loader img
+{
+    width: 100px;
+    animation: ghumo 3s linear infinite both;
+}
+@keyframes ghumo 
+{
+    0%{
+        transform: rotate(0deg);
+    }
+    100%{
+        transform: rotate(360deg);
+    }  
+}
+#nav
+{
+    width: 100%;
+    height: 8vh;
+    position: fixed;
+    /* background-color: red; */
+    z-index: 9999;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 15px;
+}
+#nav p
+{
+    font-size: 23px;
+    font-weight: 300;
+}
+#nav button
+{
+    background-color: black;
+    border: none;
+    color: white;
+    padding: 10px 20px;
+    border-radius: 50px;
+}
+
+#main
+{
+    position: relative;
+    overflow: hidden;
+}
+
+#page1
+{
+    width: 100vw;
+    height: 100vh;
+    background-color: #F1F1F1;
+    position: relative;
+}
+canvas
+{
+    width: 100%;
+    height: 100%;
+    z-index: 9;
+}
+
+#backgroundloop{
+    display: flex;
+    position: absolute;
+    /* background-color: red; */
+    top: 24%;
+    height: 25%;
+    width: 100%;
+    white-space: nowrap;
+}
+#backgroundloop>h1{
+    font-size: 12vw;
+    font-weight: 300;
+    animation-name: anim;
+    animation-duration: 30s;
+    animation-timing-function: linear;
+    animation-iteration-count: infinite;
+}
+#backgroundloop>h1>span{
+    -webkit-text-stroke: 1.2px #000;
+    color: transparent;
+    font-weight: 500;
+}
+@keyframes anim{
+    0%{
+        transform: translateX(0%);
+    }
+    100%{
+        transform: translateX(-100%);
+    }
+}
+#page1 h3
+{
+    z-index: 999;
+    position: absolute;
+    top: 60%;
+    font-weight: 300;
+    font-size: 14.5px;
+    left: 8%;
+}
+#page1 h4
+{
+    z-index: 999;
+    position: absolute;
+    top: 65%;
+    font-weight: 300;
+    font-size: 14.5px;
+    right: 16%;
+}
+
+#page2
+{
+    width: 100vw;
+    height: 100vh;
+    position: relative;
+    /* background-color: magenta; */
+    background-color: transparent;
+    z-index: 999;
+}
+#page2 h3
+{
+    font-size: 14px;
+    font-weight: 400;
+    color: rgb(55, 55, 55);
+    margin: 25px 0;
+    z-index: 999;
+}
+#page2 h1
+{
+    font-size: 2.8vw;
+    z-index: 999;
+}
+#page2 #left
+{
+    position: absolute;
+    top: 23%;
+    left: 10%;
+    z-index: 999;
+    /* background-color: red; */
+}
+#page2 #right
+{
+    /* background-color: yellow; */
+    position: absolute;
+    top: 50%;
+    left: 67%;
+    z-index: 999;
+
+}
+#page2 #right h1
+{
+    text-align: end;
+}
+#page2 #right h3
+{
+    text-align: end;
+}
+
+#page3
+{
+    width: 100vw;
+    height: 100vh;
+    /* background-color: #F1F1F1; */
+    background-color: transparent;
+    z-index: 999;
+    position: relative;
+}
+#page3 #left
+{
+    position: absolute;
+    /* background-color: palegoldenrod; */
+    top: 23%;
+    left: 10%;
+}
+#page3 #left p
+{
+    margin-bottom: 30px;
+    font-size: 15px;
+}
+#page3 #left h1
+{
+    font-size: 4.2vw;
+}
+#page3>p
+{
+    position: absolute;
+    top: 55%;
+    right: 7%;
+    text-align: end;
+    z-index: 999;
+    font-size: 15px;
+}
+
+#page4
+{
+    width: 100vw;
+    height: 100vh;
+    /* background-color: #F1F1F1; */
+    background-color: transparent;
+    z-index: 999;
+    position: relative;
+}
+#page4>p
+{
+    position: absolute;
+    /* background-color: palegoldenrod; */
+    top: 38%;
+    left: 5%;
+    z-index: 999;
+    font-size: 15px;
+}
+#page4 #right
+{
+    position: absolute;
+    top: 38%;
+    right: 8%;
+}
+#page4 #right p
+{
+    margin-bottom: 30px;
+    font-size: 15px;
+    text-align: end;
+}
+#page4 #right h1
+{
+    font-size: 4.2vw;
+    text-align: end;
+}
+
+#page5
+{
+    width: 100vw;
+    height: 130vh;
+    background-color: #F1F1F1;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-end;
+}
+#page5 #textcontainer
+{
+    width: 100%;
+    height: 43vh;
+    /* background-color: yellow; */
+}
+#page5 #textcontainer p
+{
+    text-align: center;
+}
+#page5 #textcontainer h1
+{
+    font-size: 4vw;
+    text-align: center;
+    margin: 20px 0;
+}
+#page5 #loop
+{
+    margin-top: 10vh;
+    width: 100%;
+    height: 60vh;
+    /* background-color: indianred; */
+    display: flex;
+}
+#page5 #loop .cont
+{
+    display: flex;
+    animation-name: anim;
+    animation-duration: 20s;
+    animation-timing-function: linear;
+    animation-iteration-count: infinite;
+}
+#page5 #loop .cont img
+{
+    height: 60vh;
+    margin-left: -130px;
+}
+
+
+#page6
+{
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    background-color: #171010;
+}
+#page6 #text h1
+{
+    font-size: 4vw;
+    color: white;
+    text-align: center;
+}
+#page6 #text p
+{
+    color: white;
+    text-align: center;
+}
+#page6 #cards
+{
+    width: 85%;
+    height: 55vh;
+    /* background-color: yellow; */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+    margin-top: 90px;
+}
+#page6 #cards .card
+{
+    background-color: white;
+    width: 26vw;
+    height: 11.5vw;
+    border-radius: 15px;
+    margin: 15px 15px;
+    padding: 20px;
+    transition: all cubic-bezier(0.19, 1, 0.22, 1) 1s;
+}
+#page6 #cards .card:hover
+{
+    cursor: pointer;
+    transform: skew(3deg);
+}
+#page6 #cards .card h3
+{
+    margin: 20px 0;
+}
+
+
+
+#page7
+{
+    width: 100vw;
+    height: 260vh;
+    background-color: #171010;
+    border-top: 2px dashed white;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+#page7 #text h1
+{
+    color: white;
+    font-size: 4vw;
+    text-align: center;
+    margin-top: 30px;
+}
+#page7 #text p
+{
+    color: white;
+    text-align: center;
+}
+
+#page7 #loops
+{
+    width: 100%;
+    height: 60vh;
+    /* background-color: yellow; */
+    margin-top: 60px;
+    margin-bottom: 500px;
+}
+#page7 #loops .loop
+{
+    width: 100%;
+    height: calc(100%/3);
+    /* background-color: plum; */
+    display: flex;
+    white-space: nowrap;
+}
+#page7 #loops .center
+{
+    margin: 10px 0;
+}
+#page7 #loops .loop h1
+{
+    -webkit-text-stroke: 1px white;
+    color: transparent;
+    font-size: 10vw;
+}
+#page7 #loops .center h1
+{
+    animation-name: anim;
+    animation-duration: 30s;
+    animation-timing-function: linear;
+    animation-iteration-count: infinite;
+}
+#page7 #loops .rest
+{
+    justify-content: flex-end;
+}
+#page7 #loops .rest h1
+{
+    animation-name: anime;
+    animation-duration: 45s;
+    animation-timing-function: linear;
+    animation-iteration-count: infinite;
+}
+@keyframes anime{
+    0%{
+        transform: translateX(0%);
+    }
+    100%{
+        transform: translateX(100%);
+    }
+}
+#page7>img
+{
+    position: absolute;
+    width: 42vw;
+    top: 35%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+}
+
+#page7 #line
+{
+    width: 2px;
+    height: 150px;
+    background-color: white;
+}
+
+#page7 #media
+{
+    display: flex;
+    align-items: center;
+    margin-top: 80px;
+}
+#page7 #media .dabba
+{
+    width: 230px;
+    height: 40px;
+    border: 1px solid white;
+    margin: 0 15px;
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 40px;
+    cursor: pointer;
+    transition: all cubic-bezier(0.19, 1, 0.22, 1) 1s;
+}
+#page7 #media .dabba:hover
+{
+    background-color: white;
+}
+#page7 #media .dabba:hover p
+{
+    color: black;
+}
+#page7 h2
+{
+    color: transparent;
+    -webkit-text-stroke: 1px white;
+    font-size: 11vw;
+    text-align: center;
+    margin-top: 30px;
+    margin-bottom: 30px;
+}
+#page7>p
+{
+    color: white;
+}
